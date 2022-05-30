@@ -35,14 +35,14 @@
   display: flex;
 }
 .todo__list {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 .todo__list-item, .todo__title {
-  list-style:none;
+  list-style: none;
 }
 .todo__task-input, .btn{
-  outline:none;
+  outline: none;
 }
 .btn {
   background: none;
@@ -137,14 +137,14 @@
 
 /* Edit Task */
 .todo__list-item .todo__task-input {
-  display:none;
+  display: none;
 }
 
 .todo__list-item--edit-mode .todo__task-input {
-  display:inline-block;
-  width:224px;
+  display: inline-block;
+  width: 224px;
 }
 
 .todo__list-item--edit-mode .todo__task-name {
-  display:none;
+  display: none;
 }

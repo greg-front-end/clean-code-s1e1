@@ -104,9 +104,13 @@
   justify-content: space-between;
   align-items: center;
 }
+.todo__list-item
 .todo__checkbox,
+.todo__list-item
 .todo__task-name,
+.todo__list-item
 .todo__task-input,
+.todo__list-item
 .btn {
   vertical-align: middle;
 }

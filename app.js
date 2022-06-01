@@ -7,7 +7,7 @@ const createNewTaskElement = function (taskString) {
 
   const listItem = document.createElement('li');
   const checkBox = document.createElement('input');
-  const label = document.createElement('label');
+  const span = document.createElement('span');
   const editInput = document.createElement('input');
   const editButton = document.createElement('button');
   const deleteButton = document.createElement('button');
@@ -15,8 +15,8 @@ const createNewTaskElement = function (taskString) {
 
   listItem.className = 'todo__list-item';
 
-  label.innerText = taskString;
-  label.className = 'todo__task-name';
+  span.innerText = taskString;
+  span.className = 'todo__task-name';
 
   checkBox.type = 'checkbox';
   checkBox.className = 'todo__checkbox';
@@ -33,7 +33,7 @@ const createNewTaskElement = function (taskString) {
   deleteButton.appendChild(deleteButtonImg);
 
   listItem.appendChild(checkBox);
-  listItem.appendChild(label);
+  listItem.appendChild(span);
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
@@ -59,15 +59,15 @@ const editTask = function () {
   const listItem = this.parentNode;
 
   const editInput = listItem.querySelector('.todo__task-input');
-  const label = listItem.querySelector('.todo__task-name');
+  const span = listItem.querySelector('.todo__task-name');
   const editBtn = listItem.querySelector('.todo__btn-edit');
   const containsClass = listItem.classList.contains('todo__list-item--edit-mode');
 
   if (containsClass) {
-    label.innerText = editInput.value;
+    span.innerText = editInput.value;
     editBtn.innerText = 'Edit';
   } else {
-    editInput.value = label.innerText;
+    editInput.value = span.innerText;
     editBtn.innerText = 'Save';
   }
 
